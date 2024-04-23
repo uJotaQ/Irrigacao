@@ -1,12 +1,15 @@
-module main(A, M, B, AL, VE, US, UA, T, GT, AS, SL, A7, B7, C7, D7, E7, F7, G7);
+module main(A, M, B, AL, VE, US, UA, T, GT, AS, SL, A7, B7, C7, D7, E7, F7, G7, DG1, DG2, DG3);
 
 	input A, M, B, US, UA, T, SL;
-	output AL, VE, GT, AS, A7, B7, C7, D7, E7, F7, G7;
+	output AL, VE, GT, AS, A7, B7, C7, D7, E7, F7, G7, DG1, DG2, DG3;
 	
 	
 	wire A1, B1, C1, D1, E1, F1, G1;
 	wire A2, B2, C2, D2, E2, F2, G2;
 	
+	not (DG1, 1'b0);
+	not (DG2, 1'b0);
+	not (DG3, 1'b0);
 	
 	Alarme(A, M, B, AL);
 	Valvula(AL, A, B, VE);
